@@ -18,13 +18,13 @@
 
 ---
 
-## 🎯 Цель работы
+## Цель работы
 
 Научиться создавать системы работы с потоками данных с использованием инструмента Apache Airflow.
 
 ---
 
-## 📌 Задачи
+## Задачи
 
 - Развернуть приложение Apache Airflow
 - Разработать DAG
@@ -32,7 +32,7 @@
 
 ---
 
-## 💻 Среда выполнения
+## Среда выполнения
 
 | Параметр | Значение |
 |----------|----------|
@@ -91,8 +91,6 @@ pip install "apache-airflow==${AIRFLOW_VERSION}" --constraint "${CONSTRAINT_URL}
 
 **Результат:** `Successfully installed apache-airflow-2.10.3`
 
-![Установка Airflow](screenshots/02_airflow_install.png)
-
 ---
 
 ## Шаг 3: Запуск Apache Airflow
@@ -106,7 +104,7 @@ airflow db init
 
 **Результат:** `Initialization done`
 
-![Инициализация БД](screenshots/03_db_init.png)
+![Инициализация БД](screenshots/02_db_init.png)
 
 ### 3.2 Создание пользователя-администратора
 
@@ -128,13 +126,13 @@ airflow standalone
 
 **Результат:** `Airflow is ready`
 
-![Airflow запущен](screenshots/04_airflow_ready.png)
+![Airflow запущен](screenshots/03_airflow_ready.png)
 
 ### 3.4 Веб-интерфейс Airflow
 
 После запуска открываем веб-интерфейс на порту **8080**.
 
-![Веб-интерфейс Airflow](screenshots/05_airflow_ui.png)
+![Веб-интерфейс Airflow](screenshots/04_airflow_ui.png)
 
 ---
 
@@ -276,19 +274,9 @@ airflow dags trigger student_grades_pipeline
 airflow dags list-runs -d student_grades_pipeline
 ```
 
-![DAG в списке](screenshots/06_dag_list.png)
-
 ### 5.5 Graph View в веб-интерфейсе
 
-![Graph View](screenshots/07_graph_view.png)
-
----
-
-## 📊 Результаты
-
-### Все задачи выполнены успешно (зелёные)
-
-![Успешное выполнение](screenshots/08_success.png)
+![Graph View](screenshots/05_graph_view.png)
 
 ### Содержимое файла отчёта
 
@@ -305,7 +293,7 @@ cat /tmp/grades_report.txt
 Сдали экзамен: ['Алексей', 'Мария', 'Дмитрий', 'Анна']
 ```
 
-![Результаты](screenshots/09_results.png)
+![Результаты](screenshots/06_results.png)
 
 ---
 
@@ -322,7 +310,7 @@ airflow-lab2/
     ├── 03_airflow_ready.png   # Airflow is ready
     ├── 04_airflow_ui.png      # Веб-интерфейс
     ├── 05_graph_view.png      # Граф задач
-    └── 07_results.png         # Файл результатов
+    └── 06_results.png         # Файл результатов
 ```
 
 ---
